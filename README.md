@@ -1,2 +1,2 @@
-# solid_principles
-Examples for SOLID principles in C++
+# library
+saved examples in C++
