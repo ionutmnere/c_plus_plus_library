@@ -119,6 +119,7 @@ int main()
     std::cout << "reverse_smart_recursive: '" << reverse_smart_recursive(l_input7, str_delimiter) << "'"<< std::endl;
     std::cout << std::endl;
 
+    // --------- Sequential and paralel examples -------------------
     std::string l_input8("This is a long string to be reversed! ");
     /// double N times
     for (int i = 0; i < 10; ++i) {
@@ -147,7 +148,10 @@ int main()
         reverse_string_paralel(l_input8);
         parallel_time += std::chrono::high_resolution_clock::now() - start_time;
     }
-    std::cout << "parallel_time: " << (parallel_time.count()*1000)/10 << " ms." << std::endl << std::endl;
+    std::cout << "parallel_time: " << (parallel_time.count()*1000)/10 << " ms." << std::endl;
+    std::cout << "Speedup: " << (float)(sequential_time/parallel_time) << std::endl;
+    std::cout << "Efficiency: " <<  (float)(100*(sequential_time/parallel_time)/std::thread::hardware_concurrency()) 
+              << " %" << std::endl << std::endl;
     
     l_input8 = l_input8 + l_input8 + l_input8;
     std::cout << "input length is " << l_input8.length() << std::endl;
@@ -175,6 +179,9 @@ int main()
         parallel_time_2 += std::chrono::high_resolution_clock::now() - start_time;
     }
     std::cout << "parallel_time_2: " << (parallel_time_2.count()*1000)/10 << " ms." << std::endl << std::endl;
+    std::cout << "Speedup: " << (float)(sequential_time_2/parallel_time_2) << std::endl;
+    std::cout << "Efficiency: " <<  (float)(100*(sequential_time_2/parallel_time-2)/std::thread::hardware_concurrency()) 
+              << " %" << std::endl << std::endl;
 
     std::cout << "main finished. exiting..." << std::endl;
     return 0;
