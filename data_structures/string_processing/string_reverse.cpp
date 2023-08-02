@@ -178,7 +178,7 @@ int main()
         reverse_string_paralel(l_input8, DEPTH); // split the work one level deeper
         parallel_time_2 += std::chrono::high_resolution_clock::now() - start_time;
     }
-    std::cout << "parallel_time_2: " << (parallel_time_2.count()*1000)/10 << " ms." << std::endl << std::endl;
+    std::cout << "parallel_time_2: " << (parallel_time_2.count()*1000)/10 << " ms." << std::endl;
     std::cout << "Speedup: " << (float)(sequential_time_2/parallel_time_2) << std::endl;
     std::cout << "Efficiency: " <<  (float)(100*(sequential_time_2/parallel_time-2)/std::thread::hardware_concurrency()) 
               << " %" << std::endl << std::endl;
