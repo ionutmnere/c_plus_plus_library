@@ -1,3 +1,6 @@
+/// This principle is fairly straightforward. It means that classes and/or methods should do one thing and do it in the most efficient way. 
+/// In the coder’s jargon, this is translated that classes should have high cohesion. It also helps in the reusability of the entities.
+
 #include <iostream>
 #include <fstream>
 #include <string>

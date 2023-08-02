@@ -1,3 +1,6 @@
+/// This seems strange. The meaning of open is that the structure of code (call me architecture) should be open for extensions (by adding new features) 
+/// but closed for modifications. The latter means that we do not need to modify the existing codebase in order to add new features,
+/// we just build on top, or better extend it.
 #include <iostream>
 #include <string>
 #include <vector>

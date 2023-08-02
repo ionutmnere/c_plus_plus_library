@@ -1,3 +1,6 @@
+/// This is the fourth principle which means again, do not go too general. 
+/// It is better to have several specific interfaces instead of having one generic.
+
 #include <iostream>
 #include <vector>
 

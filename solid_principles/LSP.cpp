@@ -1,6 +1,5 @@
-// Liskov Substitution Principle
-// Liskov Substitution Principle states that “Objects of superclass can be should be replaceable with objects of subclass without altering the correctness of program.”
-// In Simple terms, it means that a subclass should be able to be used wherever superclass is expected, and it should introduce the error or break the program.
+// Liskov Substitution Principle states that “Objects of superclass should be replaceable with objects of subclass without altering the correctness of program.”
+// In Simple terms, it means that a subclass should be able to be used wherever superclass is expected, and it should not introduce any errors or break the program.
 // In another words, You are expected that you should not reduce the number of functionality in the subclass than superclass.
 
 #include <iostream>

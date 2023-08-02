@@ -85,7 +85,7 @@ int main() {
 
   // This example respects the DIP
   BetterLightBulb better_light_bulb;
-  BetterElectricPowerSwitch better_power_switch(better_light_bulb);
+  BetterElectricPowerSwitch better_power_switch{better_light_bulb};
   better_power_switch.press();
   better_power_switch.press();
 
