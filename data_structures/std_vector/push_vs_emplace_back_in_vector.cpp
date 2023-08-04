@@ -49,13 +49,14 @@ int main()
 	displ_v_of_pair(v2);
 
 	// v2.push_back(4, "four"); // does not compile
-	v2.emplace_back(4, "four"); // HERE IS ONE DIFFERENCE BETWEEN push_back and emplace_back 
-	///                            -> emplace_back constructs a pair itself; push_back does not
+	v2.emplace_back(4, "four"); // DIFFERENCE BETWEEN push_back and emplace_back 
+	///                            |--> emplace_back constructs a pair itself; push_back does not
 	displ_v_of_pair(v2);
 
 	// std::cout << v2.emplace_back(5, "five") << std::endl; // does not compile - because cout does not know how to print pair
 	// v2.push_back(5, std::string("five"));                 // does not compile
 	v2.emplace_back(5, std::string("five"));
+	v2.emplace_back(6, "six");
 	displ_v_of_pair(v2);
 
     std::cout << std::endl << "main finished. exiting..." << std::endl << std::endl;
