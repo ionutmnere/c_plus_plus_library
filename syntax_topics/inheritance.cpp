@@ -22,7 +22,7 @@ class BetterBaseClass
 {
 public:
   BetterBaseClass() {std::cout << "BetterBaseClass constructor..." << std::endl;}
-  virtual ~BetterBaseClass() {std::cout << "~BetterBaseClass destructor..." << std::endl;}
+  virtual ~BetterBaseClass() {std::cout << "~BetterBaseClass destructor..." << std::endl;} // note the virtual destructor
 };
 
 class BetterDerivedClass : public BetterBaseClass
