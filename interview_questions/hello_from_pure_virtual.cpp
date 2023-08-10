@@ -1,3 +1,5 @@
+// Q: is it possible?
+
 #include <iostream>
 
 class A 
