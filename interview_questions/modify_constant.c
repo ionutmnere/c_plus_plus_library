@@ -1,4 +1,4 @@
-
+// Q: is the following possible?
 #include <stdio.h>
 int main(void)
 {
