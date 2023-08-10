@@ -45,14 +45,14 @@ int main()
     // ----- Example 4 -----
 	typedef void (B::*FpType)(const int x);
 	FpType function_pointer4 = &B::foo;
-	#define CALL_MEMBER_FN(object, ptrToMember) ((object).*(ptrToMember))
+	#define CALL_MEMBER_FN(object, ptrToMember) (object.*ptrToMember)
 	B b2;
 	CALL_MEMBER_FN(b2, function_pointer4)(20);
 
 	// ----- Example 5 -----
 	auto function_pointer5 = &B::foo;
 	B b3;
-	((b3).*(function_pointer5))(30);
+	(b3.*function_pointer5)(30);
 
 	std::cout << std::endl << "main finished. exiting..." << std::endl;
 	return 0;
